@@ -13,14 +13,13 @@ import springfox.documentation.schema.ModelRef;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
-//Configuration
+@Configuration
 public class SwaggerConfigurations {
 	
 	
 	@Bean
 	public Docket forumApi() {
-		
-		
+				
 		return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("br.com.alura.forum"))
